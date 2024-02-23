@@ -26,6 +26,8 @@
 //   return (12, 'kk');
 // }
 
+import 'dart:io';
+
 /////
 // ///
 // void main() {
@@ -41,13 +43,40 @@
 
 //pattern record
 
+// void main() {
+//   var (age, name) = functionrecode();
+//   print(age);
+// }
+
+// (int, String) functionrecode() {
+//   print('hello');
+
+//   return (12, 'kk');
+// }
+
+// problem awm thei
+
+// void main() {
+//   String name = 'rivann';
+//   var a = functionrecode(name: name);
+//   print(a);
+// }
+
+// String? functionrecode({required String name}) {
+//   print(name + 'lu');
+//   return name + 'klu'; //<- ends the function
+//   print('hello');
+// }
+
+//dead code <-
+
 void main() {
-  var (age, name) = functionrecode();
-  print(age);
+  String name = stdin.readLineSync()!;
+  var a = functionrecode(name: name);
+  print(a);
 }
 
-(int, String) functionrecode() {
-  print('hello');
-
-  return (12, 'kk');
+String? functionrecode({String? name}) {
+  print(name! + 'lu');
+  return name + 'klu'; //<- ends the function
 }
