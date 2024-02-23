@@ -114,14 +114,29 @@ import 'dart:io';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void main() {
-  final stuff = functionrecode();
+// void main() {
+//   final stuff = functionrecode();
 
-  print(stuff.name);
+//   print(stuff.name);
+// }
+
+// ({String name, int age}) functionrecode() {
+//   String name = 'hello';
+//   int age = 23;
+//   return (name: 'hruaia', age: 22); //<- ends the function
+// }
+////////////////////////////////////////////////////
+// callback
+void main() {
+  funk();
+  second(funk);
 }
 
-({String name, int age}) functionrecode() {
-  String name = 'hello';
-  int age = 23;
-  return (name: 'hruaia', age: 22); //<- ends the function
+void funk() {
+  print('hello');
+}
+
+void second(Function callfunc) {
+  callfunc();
+  print('again');
 }
