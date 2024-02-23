@@ -96,18 +96,32 @@ import 'dart:io';
 // }
 
 // record aiah class
-class Person {
-  String name;
-  int age;
+// class Person {
+//   String name;
+//   int age;
 
-  Person(this.name, this.age);
-}
+//   Person(this.name, this.age);
+// }
+
+// void main() {
+//   Person person = functionrecode(name: 'hruaia', age: 22);
+//   print(person.age);
+// }
+
+// Person functionrecode({required String? name, required int? age}) {
+//   return Person(name!, age!); //<- ends the function
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void main() {
-  Person person = functionrecode(name: 'hruaia', age: 22);
-  print(person.age);
+  final stuff = functionrecode();
+
+  print(stuff.name);
 }
 
-Person functionrecode({required String? name, required int? age}) {
-  return Person(name!, age!); //<- ends the function
+({String name, int age}) functionrecode() {
+  String name = 'hello';
+  int age = 23;
+  return (name: 'hruaia', age: 22); //<- ends the function
 }
