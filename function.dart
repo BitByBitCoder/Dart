@@ -70,13 +70,44 @@ import 'dart:io';
 
 //dead code <-
 
-void main() {
-  String name = stdin.readLineSync()!;
-  var a = functionrecode(name: name);
-  print(a);
+// void main() {
+//   String name = stdin.readLineSync()!;
+//   var a = functionrecode(name: name);
+//   print(a);
+// }
+
+// String? functionrecode({String? name}) {
+//   print(name! + 'lu');
+//   return name + 'klu'; //<- ends the function
+// }
+
+//positional leh named ti pawh dan
+//tih pawlh don chuan positional hmasak a ngai
+// void main() {
+//   int age = 24;
+//   String name = stdin.readLineSync()!;
+//   var a = functionrecode(age, name: name);
+//   print(a);
+// }
+
+// String? functionrecode(int age, {required String name}) {
+//   print("$name $age");
+//   return ''; //<- ends the function
+// }
+
+// record aiah class
+class Person {
+  String name;
+  int age;
+
+  Person(this.name, this.age);
 }
 
-String? functionrecode({String? name}) {
-  print(name! + 'lu');
-  return name + 'klu'; //<- ends the function
+void main() {
+  Person person = functionrecode(name: 'hruaia', age: 22);
+  print(person.age);
+}
+
+Person functionrecode({required String? name, required int? age}) {
+  return Person(name!, age!); //<- ends the function
 }
