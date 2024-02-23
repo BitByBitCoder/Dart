@@ -9,3 +9,12 @@
 
 //   print(u);
 // }
+
+import './class.dart';
+
+void main() {
+  Person person = Person(name: 'hruaia');
+
+  print(person.name);
+  print(person.age);
+}
