@@ -10,11 +10,13 @@
 //   print(u);
 // }
 
-import './class.dart';
+// import './class.dart';
 
-void main() {
-  Person person = Person(name: 'hruaia');
+// void main() {
+//   Person person = Person(name: 'hruaia');
 
-  print(person.name);
-  print(person.age);
-}
+//   print(person.name);
+//   print(person.age);
+
+//   person.setHeight = 12;
+// }

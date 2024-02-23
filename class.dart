@@ -29,21 +29,61 @@
 //private variable
 //private variable are private to a file not a class
 
-class Person {
-  String name;
+// class Person {
+//   String name;
 
-  Person({required this.name});
+//   Person({required this.name});
 
-  int _age = 1;
+//   int _age = 1;
 
-  int get age => _age;
-  set setHeight(int h) {
-    _age = h;
+//   int get age => _age;
+//   set setHeight(int h) {
+//     _age = h;
+//   }
+// }
+
+// void main() {
+//   Person person = Person(name: 'name');
+
+//   print(person._age);
+// }
+
+// Static
+
+// class Constants {
+//   static final color = 'blue';
+//   static int a = 10;
+
+//   static int giveMeSomeValue() {
+//     return a;
+//   }
+// }
+
+// void main() {
+//   print(Constants.color);
+// }
+
+// in static method normal non static cannot be used
+
+///////////////////////////
+///
+///inheritance
+
+class Vehicle {
+  int speed = 10;
+  bool isEngineWorking = false;
+  bool isLightOn = true;
+  void accelerate() {
+    speed += 10;
   }
 }
 
-void main() {
-  Person person = Person(name: 'name');
+class Car extends Vehicle {
+  int a = 0;
+}
 
-  print(person._age);
+void main() {
+  Vehicle vehicle = Vehicle();
+  vehicle.accelerate();
+  Car car = Car();
 }
