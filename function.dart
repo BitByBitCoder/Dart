@@ -127,16 +127,23 @@ import 'dart:io';
 // }
 ////////////////////////////////////////////////////
 // callback
+// void main() {
+//   funk();
+//   second(funk);
+// }
+
+// void funk() {
+//   print('hello');
+// }
+
+// void second(Function callfunc) {
+//   callfunc();
+//   print('again');
+// }
+
 void main() {
-  funk();
-  second(funk);
-}
-
-void funk() {
-  print('hello');
-}
-
-void second(Function callfunc) {
-  callfunc();
-  print('again');
+  for (int i = 10; i < 100; i++) {
+    String name = stdin.readLineSync()!;
+    print("$name \n");
+  }
 }

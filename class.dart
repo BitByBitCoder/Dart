@@ -69,21 +69,61 @@
 ///
 ///inheritance
 
-class Vehicle {
-  int speed = 10;
-  bool isEngineWorking = false;
-  bool isLightOn = true;
-  void accelerate() {
-    speed += 10;
+// class Vehicle {
+//   int speed = 10;
+//   bool isEngineWorking = false;
+//   bool isLightOn = true;
+//   void accelerate() {
+//     speed += 10;
+//   }
+// }
+
+// class FlyingVehicle {
+//   int flyingSpeed = 100000000;
+// }
+
+// class Car extends Vehicle {
+//   // inherit from Vehicle class
+//   int a = 0;
+// }
+
+// void main() {
+//   Vehicle vehicle = Vehicle();
+//   vehicle.accelerate();
+//   Car car = Car();
+
+//   car.isEngineWorking;
+// }
+
+// by gpt
+
+// In Dart, a class can only extend one other class, known as single inheritance.
+//  However, Dart supports implementing multiple interfaces through the
+// use of mixins. Mixins allow you to reuse code in multiple class hierarchies. Here's a basic example:
+
+// for the safry of the class field can be eqully can cause error multiple is not alloud
+
+////////////////overide test
+class Super {
+  String superC = 'super';
+}
+
+class First extends Super {
+  String superC = 'overide';
+  String first = 'first';
+}
+
+class Second extends First {
+  String second = 'second';
+  int speed() {
+    return 22;
   }
 }
 
-class Car extends Vehicle {
-  int a = 0;
+void main() {
+  Second sec = Second();
+
+  print(sec.superC);
 }
 
-void main() {
-  Vehicle vehicle = Vehicle();
-  vehicle.accelerate();
-  Car car = Car();
-}
+//a data kal dan hi chu datatype leh a call na level hnaih dan a zir in leh overide in 
