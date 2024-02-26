@@ -1,3 +1,5 @@
+//A list is a class
+
 void main() {
   List notfil = ['1', '2', '3'];
 

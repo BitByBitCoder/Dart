@@ -106,6 +106,9 @@
 ////////////////overide test
 class Super {
   String superC = 'super';
+  int speed() {
+    return 22;
+  }
 }
 
 class First extends Super {
@@ -115,9 +118,6 @@ class First extends Super {
 
 class Second extends First {
   String second = 'second';
-  int speed() {
-    return 22;
-  }
 }
 
 void main() {
@@ -127,3 +127,4 @@ void main() {
 }
 
 //a data kal dan hi chu datatype leh a call na level hnaih dan a zir in leh overide in 
+//overide hman chuanm a function inang nagai a type eroh ngai lo

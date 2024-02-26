@@ -20,3 +20,5 @@
 
 //   person.setHeight = 12;
 // }
+
+void main() {}

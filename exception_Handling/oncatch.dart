@@ -5,7 +5,7 @@ void main() {
     print(10 ~/ 0);
     print('hruia');
   } on Exception catch (e) {
-    // on alloud us to catch somekind of exception
+    // on alloud us to catch somekind of exception or error ex firebase firestore
     print(e);
   } catch (e) {
     print('an error occured');
