@@ -12,88 +12,75 @@ void fetch() async {
   const uri = 'http://localhost:3000/stuff';
   final response = await http.get(Uri.parse(uri));
   final result = convert.jsonDecode(response.body);
-  final model = Types.fromMap(result);
-  print("${model.onetype[0].id}");
+  final model = Stuff.fromJson(result);
+  print("${model.oneType[1].id}");
 }
 
-class Types {
-  final List<Onetype> onetype;
-  final Othertype othertype;
+class Data {
+  Stuff stuff;
+  OtherStuff otherStuff;
 
-  Types({required this.onetype, required this.othertype});
+  Data({required this.stuff, required this.otherStuff});
 
-  Map<String, dynamic> toMap() {
-    return <String, dynamic>{
-      'onetype': onetype.map((x) => x.toMap()).toList(),
-      'othertype': othertype.toMap(),
-    };
-  }
-
-  factory Types.fromMap(Map<String, dynamic> map) {
-    return Types(
-      onetype: List<Onetype>.from(
-        (map['onetype'] as List<int>).map<Onetype>(
-          (x) => Onetype.fromMap(x as Map<String, dynamic>),
-        ),
-      ),
-      othertype: Othertype.fromMap(map['othertype'] as Map<String, dynamic>),
+  factory Data.fromJson(Map<String, dynamic> json) {
+    return Data(
+      stuff: Stuff.fromJson(json['stuff']),
+      otherStuff: OtherStuff.fromJson(json['otherstuff']),
     );
   }
-
-  String toJson() => json.encode(toMap());
-
-  factory Types.fromJson(String source) =>
-      Types.fromMap(json.decode(source) as Map<String, dynamic>);
 }
 
-class Onetype {
-  final int id;
-  final String name;
+class Stuff {
+  List<OneType> oneType;
+  OtherType otherType;
 
-  Onetype({required this.id, required this.name});
+  Stuff({required this.oneType, required this.otherType});
 
-  Map<String, dynamic> toMap() {
-    return <String, dynamic>{
-      'id': id,
-      'name': name,
-    };
-  }
-
-  factory Onetype.fromMap(Map<String, dynamic> map) {
-    return Onetype(
-      id: map['id'] as int,
-      name: map['name'] as String,
+  factory Stuff.fromJson(Map<String, dynamic> json) {
+    return Stuff(
+      oneType:
+          List<OneType>.from(json['onetype'].map((x) => OneType.fromJson(x))),
+      otherType: OtherType.fromJson(json['othertype']),
     );
   }
-
-  String toJson() => json.encode(toMap());
-
-  factory Onetype.fromJson(String source) =>
-      Onetype.fromMap(json.decode(source) as Map<String, dynamic>);
 }
 
-class Othertype {
-  final int id;
-  final String company;
+class OneType {
+  int id;
+  String name;
 
-  Othertype({required this.id, required this.company});
+  OneType({required this.id, required this.name});
 
-  Map<String, dynamic> toMap() {
-    return <String, dynamic>{
-      'id': id,
-      'company': company,
-    };
-  }
-
-  factory Othertype.fromMap(Map<String, dynamic> map) {
-    return Othertype(
-      id: map['id'] as int,
-      company: map['company'] as String,
+  factory OneType.fromJson(Map<String, dynamic> json) {
+    return OneType(
+      id: json['id'],
+      name: json['name'],
     );
   }
+}
 
-  String toJson() => json.encode(toMap());
+class OtherType {
+  int id;
+  String company;
 
-  factory Othertype.fromJson(String source) =>
-      Othertype.fromMap(json.decode(source) as Map<String, dynamic>);
+  OtherType({required this.id, required this.company});
+
+  factory OtherType.fromJson(Map<String, dynamic> json) {
+    return OtherType(
+      id: json['id'],
+      company: json['company'],
+    );
+  }
+}
+
+class OtherStuff {
+  List<List<int>> thing;
+
+  OtherStuff({required this.thing});
+
+  factory OtherStuff.fromJson(Map<String, dynamic> json) {
+    return OtherStuff(
+      thing: List<List<int>>.from(json['thing'].map((x) => List<int>.from(x))),
+    );
+  }
 }
