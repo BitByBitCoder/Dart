@@ -1,0 +1,17 @@
+{
+    "abbreviation": "+08",
+    "client_ip": "49.47.145.151",
+    "datetime": "2024-02-27T14:21:41.752272+08:00",
+    "day_of_week": 2,
+    "day_of_year": 58,
+    "dst": false,
+    "dst_from": null,
+    "dst_offset": 0,
+    "dst_until": null,
+    "raw_offset": 28800,
+    "timezone": "Asia/Singapore",
+    "unixtime": 1709014901,
+    "utc_datetime": "2024-02-27T06:21:41.752272+00:00",
+    "utc_offset": "+08:00",
+    "week_number": 9
+}

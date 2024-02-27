@@ -14,7 +14,7 @@ Future fetchPerson() async {
   final response = await http.get(Uri.parse(url));
   final result = convert.jsonDecode(response.body);
   Person persons = Person.fromJson(result);
-  print(persons.addresses[0].city);
+  print(persons.name);
 }
 
 class Person {

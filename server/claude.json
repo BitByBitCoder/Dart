@@ -1,0 +1,29 @@
+{
+    "user": {
+      "name": "John",
+      "age": 30,
+      "addresses": [
+        {
+          "line1": "123 Main St",
+          "city": "Anytown",
+          "state": "CA",
+          "zip": "123456"  
+        },
+        {
+          "line1": "456 Park Ave",
+          "city": "Somewhere",
+          "state": "NY",
+          "zip": "654321"
+        }  
+      ]
+    },
+    "company": {
+      "name": "Some Company",
+      "funding": 10000000,
+      "industries": [
+        "Technology",
+        "Manufacturing",
+        "Retail"
+      ]
+    }
+  }

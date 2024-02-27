@@ -1,6 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import "dart:convert" as convert;
 import 'dart:convert';
+//he file hian server test1 .json a hmang a
+// json server package install la
+// a directory ah kal la  hei hi run rawh json-server --watch db.json --port 3000
+//db.json khi a file hming tur aw
 
 import 'package:http/http.dart' as http;
 
